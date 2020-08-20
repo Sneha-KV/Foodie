@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{!-- <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> --}}
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Create Event</title>
+</head>
+<body>
+    
+    <div class="main-content">
+        {{>header}}
+        <form class="create-event">
+            <select name="eventType" id="eventType">
+                <option value="0">Ordering Food</option>
+                <option value="1">Going Out</option>
+            </select>
+            <div class="form-data">
+                <div class="form-label-group">
+                    <label for="eventName">Name/ Occasion *</label><input required="required" type="text" name="eventName" id="eventName">
+                </div>
+                <div class="form-label-group">
+                    <label for="eventDate">Date</label><input type="text" name="eventDate" id="eventDate">
+                </div>
+                <div class="form-label-group">
+                    <label for="eventPlace">Preferred Place</label><input type="text" name="eventPlace" id="eventPlace">
+                </div>
+                
+            
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+     {{>footer}}
+</body>
+</html>
+

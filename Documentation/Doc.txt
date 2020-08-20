@@ -1,0 +1,44 @@
+go to web-sever folder and run -> npm install
+
+Creating SSH key -> git bash (windows) or terminal (in mac):
+command: ssh-keygen -t rsa -b 4096 -C "mail"
+
+SSH-> https://deloittedevelopment.udemy.com/course/the-complete-nodejs-developer-course-2/learn/lecture/13729098#notes
+
+DEPLOYING TO HEROKU:
+https://deloittedevelopment.udemy.com/course/the-complete-nodejs-developer-course-2/learn/lecture/13729100#notes
+
+heroku keys:add -> to add ssh key
+heroku create application-name 
+package.json -> scripts -> write the code we have to run (node src/app.js) in scripts object as -> "start" : "node xyz.js"
+https://weather-app-kv.herokuapp.com/ | https://git.heroku.com/weather-app-kv.git
+ port of heroku process.env.PORT
+
+Command to deploy: git push heroku master 
+
+
+Load express -> const app = express();
+express get-> 
+args:
+1. domain
+2. call back with args(request, reponse) 
+
+* To start a server -> app.listen(port_number, callback function)
+
+* Send some data to browser-> app.get('/path_or_route',()=> {
+    //send something
+})
+
+We can Send html/ Json etc etc or we can use the static html pages using app.use(express.static(path_of_the_html_page));
+
+** Dynamic text -> use handle bars with Express  -> app.set()
+-> npm i hbs@versionNumber
+
+res.render(file_name, object_to_render) -> to render through Handle bar
+1. file_name -> defaultly it has to be in a folder named 'views'
+             -> To set up a customized Path, use app.set('views', 'new_folder')
+
+
+*** PARTIALS ***
+app.registerPartials(partials_path)
+
